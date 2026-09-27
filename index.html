@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="서울 청년이 자신의 조건과 함께 정부·공공 지원사업을 비교하고 신청 전 확인사항을 살펴보는 지원핏"
+    >
+    <title>지원핏 | 내 조건에 맞는 청년 지원사업 찾기</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#search" aria-label="지원핏 조건 입력 화면">
+          <span class="brand-mark" aria-hidden="true">J</span>
+          <span>지원핏</span>
+        </a>
+        <span class="header-label">서울 청년 지원사업 탐색</span>
+      </div>
+    </header>
+
+    <main id="top">
+      <div class="app-view" id="search-view">
+        <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">서울 청년을 위한 지원사업 탐색</span>
+            <h1 id="hero-title">흩어진 청년 지원사업, <em>내 조건과 함께 비교해 보세요.</em></h1>
+            <p>
+              입력한 조건과 관련 있는 사업을 모아 보고, 공식 지원 조건과
+              추가로 확인할 내용을 신청 전에 차근차근 살펴볼 수 있어요.
+            </p>
+            <ul class="hero-assurance" aria-label="지원핏에서 확인할 수 있는 내용">
+              <li>관련 사업을 한곳에서 탐색</li>
+              <li>내 조건과 공식 기준을 나란히 비교</li>
+              <li>신청 전에 확인할 항목 정리</li>
+            </ul>
+          </div>
+
+          <div class="hero-search-panel" id="search-form-section">
+            <div class="section-heading section-heading--compact">
+              <span class="section-step">조건 입력</span>
+              <h2 id="form-title" tabindex="-1">내 조건으로 찾아보기</h2>
+              <p>입력한 정보는 저장하지 않으며 검색과 비교에만 사용해요.</p>
+            </div>
+            <form id="recommendation-form" class="condition-form" novalidate>
+            <div id="form-error-summary" class="error-summary" role="alert" tabindex="-1" hidden></div>
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="birth-date">생년월일 <span aria-hidden="true">*</span></label>
+                <input
+                  type="date"
+                  id="birth-date"
+                  name="birthDate"
+                  aria-describedby="birth-date-hint birth-date-error"
+                >
+                <p class="field-hint birth-date-hint" id="birth-date-hint">검색 시 현재 기준 만 나이로 계산합니다.</p>
+                <p class="field-error" id="birth-date-error" aria-live="polite"></p>
+              </div>
+
+              <p class="result-guide form-field-full">
+                <span aria-hidden="true">i</span>
+                현재 지원핏 MVP는 서울 거주 청년을 대상으로 합니다.
+              </p>
+
+              <fieldset class="form-field form-field-full">
+                <legend>현재 상태 <span aria-hidden="true">*</span></legend>
+                <div class="option-grid status-options">
+                  <label class="option-card">
+                    <input type="radio" name="status" value="대학생">
+                    <span>대학생</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="status" value="대학원생">
+                    <span>대학원생</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="status" value="취업준비생">
+                    <span>취업준비생 / 구직자</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="status" value="직장인">
+                    <span>직장인</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="status" value="자영업자">
+                    <span>자영업자</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="status" value="프리랜서">
+                    <span>프리랜서</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="status" value="무직 / 휴직">
+                    <span>무직 / 휴직</span>
+                  </label>
+                  <label class="option-card">
+                    <input type="radio" name="status" value="기타">
+                    <span>기타</span>
+                  </label>
+                </div>
+                <p class="field-error" id="status-error" aria-live="polite"></p>
+              </fieldset>
+
+              <fieldset class="form-field form-field-full">
+                <legend>관심 분야 <span aria-hidden="true">*</span></legend>
+                <p class="field-hint">1개 이상, 최대 5개까지 선택해 주세요.</p>
+                <div class="option-grid category-options">
+                  <label class="option-card compact">
+                    <input type="checkbox" name="interest" value="주거">
+                    <span>주거</span>
+                  </label>
+                  <label class="option-card compact">
+                    <input type="checkbox" name="interest" value="일자리">
+                    <span>일자리</span>
+                  </label>
+                  <label class="option-card compact">
+                    <input type="checkbox" name="interest" value="교육">
+                    <span>교육</span>
+                  </label>
+                  <label class="option-card compact">
+                    <input type="checkbox" name="interest" value="신체건강">
+                    <span>신체건강</span>
+                  </label>
+                  <label class="option-card compact">
+                    <input type="checkbox" name="interest" value="정신건강">
+                    <span>정신건강</span>
+                  </label>
+                </div>
+                <button class="disclosure-button" id="interest-disclosure-toggle" type="button" aria-expanded="false" aria-controls="additional-interests">관심 분야 더 보기</button>
+                <div class="option-grid category-options additional-interests" id="additional-interests" hidden>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="문화·여가"><span>문화·여가</span></label>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="안전·위기"><span>안전·위기</span></label>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="임신·출산"><span>임신·출산</span></label>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="보육"><span>보육</span></label>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="입양·위탁"><span>입양·위탁</span></label>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="보호·돌봄"><span>보호·돌봄</span></label>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="서민금융"><span>서민금융</span></label>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="법률"><span>법률</span></label>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="관계개선"><span>관계개선</span></label>
+                  <label class="option-card compact"><input type="checkbox" name="interest" value="에너지"><span>에너지</span></label>
+                </div>
+                <p class="field-error" id="interest-error" aria-live="polite"></p>
+              </fieldset>
+
+              <div class="form-field form-field-full optional-conditions">
+                <button class="disclosure-button disclosure-button--panel" id="optional-conditions-toggle" type="button" aria-expanded="false" aria-controls="optional-conditions-content">추천을 더 구체적으로 만들기 <span aria-hidden="true">＋</span></button>
+                <div class="optional-conditions-content" id="optional-conditions-content" hidden>
+                  <fieldset class="form-field">
+                    <legend>가구 특성</legend>
+                    <p class="field-hint">해당되는 항목만 선택해 주세요. 선택하지 않아도 검색할 수 있어요.</p>
+                    <div class="option-grid category-options">
+                      <label class="option-card compact"><input type="checkbox" name="householdType" value="다문화·탈북민"><span>다문화·탈북민</span></label>
+                      <label class="option-card compact"><input type="checkbox" name="householdType" value="다자녀"><span>다자녀</span></label>
+                      <label class="option-card compact"><input type="checkbox" name="householdType" value="보훈대상자"><span>보훈대상자</span></label>
+                      <label class="option-card compact"><input type="checkbox" name="householdType" value="장애인"><span>장애인</span></label>
+                      <label class="option-card compact"><input type="checkbox" name="householdType" value="저소득"><span>저소득</span></label>
+                      <label class="option-card compact"><input type="checkbox" name="householdType" value="한부모·조손"><span>한부모·조손</span></label>
+                    </div>
+                  </fieldset>
+                  <label class="option-card compact online-only-option">
+                    <input type="checkbox" name="onlineOnly">
+                    <span>온라인 신청 가능한 지원사업만 보기</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <button class="button button-primary submit-button" type="submit">
+              조건으로 찾아보기
+              <span aria-hidden="true">→</span>
+            </button>
+            </form>
+          </div>
+        </div>
+        </section>
+      </div>
+
+      <section class="results-section" id="results-section" aria-labelledby="results-title" hidden>
+        <div class="container">
+          <div class="results-heading">
+            <div>
+              <span class="section-step">STEP 2</span>
+              <h2 id="results-title" tabindex="-1">내 조건과 관련 있는 지원사업</h2>
+              <p id="result-summary" aria-live="polite"></p>
+              <p id="source-result-summary" class="source-result-summary" aria-live="polite"></p>
+            </div>
+            <button class="text-button" id="edit-conditions-button" type="button">조건 수정</button>
+          </div>
+
+          <div id="results-content">
+            <p id="source-status-message" class="source-status-message" role="status" hidden></p>
+            <p id="welfare-cache-message" class="welfare-cache-message" role="status" hidden></p>
+            <div class="result-overview" aria-label="추천 결과 요약">
+              <p class="overview-total">관련 사업 <strong id="total-related-count">0개</strong></p>
+              <div class="overview-breakdown" aria-label="관련도별 사업 수">
+                <p class="overview-item overview-high">매우 높음 <strong id="high-count">0개</strong></p>
+                <p class="overview-item overview-check">높음 <strong id="check-count">0개</strong></p>
+                <p class="overview-item overview-mismatch">관련 있음 <strong id="mismatch-count">0개</strong></p>
+              </div>
+            </div>
+
+            <div class="result-toolbar">
+              <div class="filter-group" id="category-filters" aria-label="카테고리 필터">
+                <button class="filter-button active" type="button" data-category="전체" aria-pressed="true">전체</button>
+                <button class="filter-button" type="button" data-category="일자리" aria-pressed="false">일자리</button>
+                <button class="filter-button" type="button" data-category="주거" aria-pressed="false">주거</button>
+                <button class="filter-button" type="button" data-category="교육" aria-pressed="false">교육</button>
+              </div>
+              <label class="sort-control" for="sort-order">
+                <span class="sr-only">정렬 기준</span>
+                <select id="sort-order">
+                  <option value="score">관련도 높은 순</option>
+                  <option value="name">이름 순</option>
+                </select>
+              </label>
+            </div>
+
+            <section class="primary-results source-results" id="welfare-results" aria-labelledby="welfare-results-title">
+              <div class="result-group-heading">
+                <div>
+                  <h3 id="welfare-results-title">맞춤 지원사업</h3>
+                  <small>중앙부처 복지서비스</small>
+                </div>
+                <p id="primary-result-count"></p>
+              </div>
+              <p class="result-guide">
+                <span aria-hidden="true">i</span>
+                관심분야와 명시적으로 일치하는 가구 특성을 기준으로 정리했습니다.
+                신청 자격 판정이 아니므로 실제 자격조건은 상세정보와 공식 공고를 확인해 주세요.
+              </p>
+              <div class="program-grid" id="program-list" aria-live="polite"></div>
+
+            </section>
+
+            <section class="source-results source-results--sh" id="sh-results" aria-labelledby="sh-results-title" hidden>
+              <div class="result-group-heading">
+                <div>
+                  <h3 id="sh-results-title">서울 주거공고</h3>
+                  <small>SH 서울주택도시개발공사</small>
+                </div>
+                <p id="sh-result-count"></p>
+              </div>
+              <div class="program-grid" id="sh-program-list" aria-live="polite"></div>
+            </section>
+
+            <div class="empty-state" id="empty-state" hidden>
+                <span class="empty-icon" aria-hidden="true">?</span>
+                <h3>관심 조건과 관련 있는 사업을 찾지 못했어요.</h3>
+                <p>관심분야를 다시 확인해 주세요.</p>
+                <button class="button button-secondary" id="retry-button" type="button">조건 다시 입력하기</button>
+            </div>
+
+            <section class="mismatch-section" id="mismatch-section" aria-labelledby="mismatch-section-title">
+              <button
+                class="mismatch-toggle"
+                id="mismatch-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="mismatch-content"
+              >
+                <span>
+                  <strong id="mismatch-section-title">조건이 맞지 않는 사업도 확인하기</strong>
+                  <small id="mismatch-count-label"></small>
+                </span>
+                <span class="toggle-icon" aria-hidden="true">⌄</span>
+              </button>
+              <div class="mismatch-content" id="mismatch-content" hidden>
+                <p>현재 입력값과 명확히 다른 핵심 조건이 있는 사업입니다. 카드에서 불일치 이유를 확인할 수 있어요.</p>
+                <div class="program-grid mismatch-grid" id="mismatch-program-list" aria-live="polite"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <strong>지원핏</strong>
+          <p>지원사업을 찾고, 비교하고, 준비하는 과정을 더 쉽게.</p>
+        </div>
+        <small>Portfolio MVP · HTML, CSS, Vanilla JavaScript</small>
+      </div>
+    </footer>
+
+    <dialog class="program-modal" id="program-modal" aria-labelledby="modal-title" aria-modal="true">
+      <div class="modal-shell">
+        <nav class="detail-navigation" aria-label="상세 화면 탐색">
+          <button class="detail-back" id="detail-back" type="button">← 추천 결과</button>
+        </nav>
+        <button class="modal-close" id="modal-close" type="button" aria-label="상세정보 닫기">×</button>
+        <div class="modal-header">
+          <div class="modal-badges">
+            <span class="source-badge" id="modal-source">중앙부처 복지서비스</span>
+            <span class="category-badge" id="modal-category"></span>
+          </div>
+          <h2 id="modal-title"></h2>
+          <p class="modal-ministry" id="modal-ministry"></p>
+        </div>
+        <div class="modal-body">
+          <p class="apply-message" id="apply-message" role="status" tabindex="-1" hidden></p>
+          <section class="official-details detail-information" id="modal-official-section">
+            <details class="detail-content-section" id="detail-summary-section" open>
+              <summary><span>사업 요약</span><small>지원 내용과 공식 기준</small></summary>
+              <div class="detail-content-body">
+                <p class="modal-summary" id="modal-summary" hidden></p>
+                <div class="official-primary">
+                  <details class="official-text-disclosure" id="modal-support-disclosure">
+                    <summary>공식 지원 내용 보기</summary>
+                    <section class="documents" id="modal-support-section" hidden>
+                      <h4>지원 내용</h4>
+                      <p id="modal-support"></p>
+                    </section>
+                  </details>
+                  <details class="official-text-disclosure" id="modal-target-disclosure">
+                    <summary>공식 지원 대상 보기</summary>
+                    <section class="documents" id="modal-target-section" hidden>
+                      <h4>지원 대상</h4>
+                      <p id="modal-target"></p>
+                    </section>
+                  </details>
+                  <details class="official-text-disclosure" id="modal-selection-disclosure">
+                    <summary>공식 선정 기준 보기</summary>
+                    <section class="documents" id="modal-selection-section" hidden>
+                      <h4>선정 기준</h4>
+                      <p id="modal-selection-criteria"></p>
+                    </section>
+                  </details>
+                </div>
+              </div>
+            </details>
+
+            <details class="detail-content-section" id="detail-condition-section" open hidden>
+              <summary><span>내 조건</span><small>추천 이유와 공고 조건 비교</small></summary>
+              <div class="detail-content-body">
+                <section class="detail-recommendation" id="modal-recommendation-section" hidden>
+                  <h3>왜 이 사업을 보여드렸나요?</h3>
+                  <ul class="reason-list" id="modal-recommendation-reasons"></ul>
+                </section>
+
+                <section class="ai-explainer" id="modal-ai-explainer-section" hidden>
+                  <div class="modal-section-heading">
+                    <span>✨ AI 맞춤 해설</span>
+                    <h3>쉬운 요약 & 팁</h3>
+                  </div>
+                  <div class="ai-explainer-content">
+                    <div id="ai-explainer-skeleton" class="skeleton-loader">
+                      <p>AI가 공고문 근거를 분석하고 있습니다...</p>
+                    </div>
+                    <div id="ai-explainer-result" hidden>
+                      <div class="ai-summary">
+                        <h4>💡 핵심 요약</h4>
+                        <p id="ai-summary-text"></p>
+                      </div>
+                      <div class="ai-tips">
+                        <div class="ai-tip-item">
+                          <h4>📌 자격조건 팁</h4>
+                          <p id="ai-eligibility-tip"></p>
+                        </div>
+                        <div class="ai-tip-item">
+                          <h4>📝 준비사항 팁</h4>
+                          <p id="ai-checklist-tip"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="fit-analysis" id="modal-fit-section" hidden>
+                  <div class="modal-section-heading">
+                    <span>내 조건과 공고 비교</span>
+                    <h3>내 조건 비교</h3>
+                  </div>
+                  <ul class="fit-analysis-list" id="modal-fit-list"></ul>
+                  <div class="additional-fit" id="modal-additional-fit" hidden>
+                    <h4>추가로 확인할 조건</h4>
+                    <p>현재 입력정보만으로 확인하기 어려운 조건입니다.</p>
+                    <ul class="fit-analysis-list" id="modal-additional-fit-list"></ul>
+                  </div>
+                  <p class="fit-analysis-empty" id="modal-fit-empty" hidden>
+                    현재 정보만으로 자동 비교할 수 있는 조건이 없습니다. 아래 공식 선정기준을 직접 확인해 주세요.
+                  </p>
+                  <p class="fit-analysis-disclaimer">
+                    이 분석은 입력한 정보와 공식 상세정보를 비교한 참고 결과이며, 최종 신청 자격을 보장하지 않습니다.
+                  </p>
+                </section>
+              </div>
+            </details>
+
+            <details class="detail-content-section" id="detail-preparation-section">
+              <summary><span>신청 준비</span><small>확인 목록과 공식 신청 정보</small></summary>
+              <div class="detail-content-body">
+                <section class="preparation-checklist" id="modal-preparation-section" hidden>
+                  <div class="modal-section-heading">
+                    <span>신청 전에 직접 확인</span>
+                    <h3>신청 전 확인 목록</h3>
+                  </div>
+                  <div class="preparation-summary" id="modal-preparation-summary" hidden>
+                    <strong id="modal-preparation-count"></strong>
+                    <span id="modal-preparation-complete" hidden>확인할 항목을 모두 체크했습니다.</span>
+                  </div>
+                  <div class="preparation-groups" id="modal-preparation-list"></div>
+                  <p id="modal-preparation-empty" hidden>
+                    현재 자동으로 정리할 수 있는 추가 준비사항이 없습니다. 공식 상세정보를 확인해 주세요.
+                  </p>
+                  <p class="preparation-guidance">신청 전 공식 공고를 최종 확인해 주세요.</p>
+                </section>
+                <div class="official-preparation">
+                  <section class="documents" id="modal-application-section" hidden>
+                    <h3>신청 방법</h3>
+                    <ul id="modal-application-methods"></ul>
+                  </section>
+                  <div class="official-more" id="modal-official-more" hidden>
+                    <button class="official-more-toggle" id="modal-official-toggle" type="button" aria-expanded="false" aria-controls="modal-official-more-content">
+                      공식 정보 더 보기
+                      <span aria-hidden="true">＋</span>
+                    </button>
+                    <div class="official-more-content" id="modal-official-more-content" hidden>
+                      <section class="documents" id="modal-contacts-section" hidden>
+                        <h4>문의처</h4>
+                        <ul id="modal-contacts"></ul>
+                      </section>
+                      <section class="documents" id="modal-related-sites-section" hidden>
+                        <h4>관련 사이트</h4>
+                        <ul id="modal-related-sites"></ul>
+                      </section>
+                      <section class="documents" id="modal-forms-section" hidden>
+                        <h4>관련 서식·자료</h4>
+                        <ul id="modal-forms"></ul>
+                      </section>
+                      <section class="documents" id="modal-legal-basis-section" hidden>
+                        <h4>관련 법령</h4>
+                        <ul id="modal-legal-basis"></ul>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </details>
+          </section>
+        </div>
+        <div class="modal-footer" hidden>
+          <button class="button button-primary" id="apply-button" type="button">신청 사이트 확인하기</button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

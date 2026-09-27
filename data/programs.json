@@ -1,0 +1,378 @@
+[
+  {
+    "id": 1,
+    "title": "서울 청년 월세 지원",
+    "region": "서울",
+    "minAge": 19,
+    "maxAge": 34,
+    "status": [
+      "대학생",
+      "취업준비생",
+      "직장인"
+    ],
+    "category": "주거",
+    "description": "서울 거주 청년의 월세 부담을 줄이기 위한 주거비 지원 사업입니다.",
+    "requiredDocs": [
+      "주민등록등본",
+      "임대차계약서",
+      "소득증빙서류"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 2,
+    "title": "경기 청년 면접 지원금",
+    "region": "경기",
+    "minAge": 18,
+    "maxAge": 39,
+    "status": [
+      "취업준비생"
+    ],
+    "category": "취업",
+    "description": "경기도 청년의 구직 활동을 돕기 위해 면접 준비 비용을 지원합니다.",
+    "requiredDocs": [
+      "신분증",
+      "면접확인서",
+      "주민등록초본"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 3,
+    "title": "전국 청년 자격증 응시료 지원",
+    "region": "전국",
+    "minAge": 18,
+    "maxAge": 34,
+    "status": [
+      "대학생",
+      "취업준비생"
+    ],
+    "category": "교육",
+    "description": "취업 준비에 필요한 자격증 시험 응시료 일부를 지원합니다.",
+    "requiredDocs": [
+      "응시확인서",
+      "결제영수증",
+      "신분증"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 4,
+    "title": "부산 청년 생활안정 지원",
+    "region": "부산",
+    "minAge": 19,
+    "maxAge": 34,
+    "status": [
+      "취업준비생",
+      "직장인"
+    ],
+    "category": "생활",
+    "description": "부산 청년의 생활비 부담 완화를 위한 생활안정 지원 사업입니다.",
+    "requiredDocs": [
+      "주민등록등본",
+      "소득확인서",
+      "통장사본"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 5,
+    "title": "인천 청년 창업 준비 지원",
+    "region": "인천",
+    "minAge": 20,
+    "maxAge": 39,
+    "status": [
+      "취업준비생",
+      "자영업자"
+    ],
+    "category": "창업",
+    "description": "초기 창업을 준비하는 청년에게 교육과 사업 준비 비용을 지원합니다.",
+    "requiredDocs": [
+      "사업계획서",
+      "주민등록초본",
+      "신분증"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 6,
+    "title": "대전 청년 교통비 지원",
+    "region": "대전",
+    "minAge": 18,
+    "maxAge": 34,
+    "status": [
+      "대학생",
+      "취업준비생",
+      "직장인"
+    ],
+    "category": "생활",
+    "description": "대전 거주 청년의 대중교통 이용 부담을 줄이기 위한 지원 사업입니다.",
+    "requiredDocs": [
+      "주민등록등본",
+      "교통카드 등록정보"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 7,
+    "title": "광주 청년 취업역량 강화 프로그램",
+    "region": "광주",
+    "minAge": 18,
+    "maxAge": 34,
+    "status": [
+      "대학생",
+      "취업준비생"
+    ],
+    "category": "취업",
+    "description": "취업 컨설팅, 자기소개서 첨삭, 모의면접을 제공하는 청년 취업 지원 프로그램입니다.",
+    "requiredDocs": [
+      "신분증",
+      "참가신청서"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 8,
+    "title": "전국 청년 온라인 직무교육 지원",
+    "region": "전국",
+    "minAge": 18,
+    "maxAge": 39,
+    "status": [
+      "대학생",
+      "취업준비생",
+      "직장인"
+    ],
+    "category": "교육",
+    "description": "디지털·직무 역량 향상을 위한 온라인 교육비를 지원합니다.",
+    "requiredDocs": [
+      "신분증",
+      "교육신청서"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 9,
+    "title": "서울 사회초년생 전세보증 지원",
+    "region": "서울",
+    "minAge": 20,
+    "maxAge": 34,
+    "status": [
+      "직장인"
+    ],
+    "category": "주거",
+    "description": "사회초년생의 안정적인 주거를 위해 전세보증 관련 비용 일부를 지원합니다.",
+    "requiredDocs": [
+      "재직증명서",
+      "임대차계약서",
+      "주민등록등본"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 10,
+    "title": "경기 대학생 학습비 지원",
+    "region": "경기",
+    "minAge": 18,
+    "maxAge": 29,
+    "status": [
+      "대학생"
+    ],
+    "category": "교육",
+    "description": "경기도 대학생의 학습 및 교육비 부담을 줄이기 위한 지원 사업입니다.",
+    "requiredDocs": [
+      "재학증명서",
+      "주민등록초본",
+      "통장사본"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 11,
+    "title": "부산 청년 창업 공간 지원",
+    "region": "부산",
+    "minAge": 20,
+    "maxAge": 39,
+    "status": [
+      "자영업자",
+      "취업준비생"
+    ],
+    "category": "창업",
+    "description": "청년 예비창업자와 초기창업자에게 공유 사무공간을 지원합니다.",
+    "requiredDocs": [
+      "사업계획서",
+      "사업자등록증 또는 예비창업확인서"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 12,
+    "title": "전국 청년 마음건강 상담 지원",
+    "region": "전국",
+    "minAge": 19,
+    "maxAge": 34,
+    "status": [
+      "대학생",
+      "취업준비생",
+      "직장인",
+      "자영업자"
+    ],
+    "category": "생활",
+    "description": "청년의 스트레스와 심리적 부담 완화를 위한 상담 비용을 지원합니다.",
+    "requiredDocs": [
+      "신분증",
+      "상담신청서"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 13,
+    "title": "인천 청년 취업 준비 패키지",
+    "region": "인천",
+    "minAge": 18,
+    "maxAge": 34,
+    "status": [
+      "취업준비생"
+    ],
+    "category": "취업",
+    "description": "취업 준비 청년에게 면접복, 사진 촬영, 컨설팅 비용을 묶어서 지원합니다.",
+    "requiredDocs": [
+      "구직등록확인서",
+      "신분증",
+      "주민등록등본"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 14,
+    "title": "대구 청년 주거 이사비 지원",
+    "region": "대구",
+    "minAge": 19,
+    "maxAge": 34,
+    "status": [
+      "대학생",
+      "취업준비생",
+      "직장인"
+    ],
+    "category": "주거",
+    "description": "대구로 이사하거나 대구 내에서 이사한 청년의 이사 비용 일부를 지원합니다.",
+    "requiredDocs": [
+      "임대차계약서",
+      "이사비 영수증",
+      "주민등록등본"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 15,
+    "title": "전국 청년 창업 교육 바우처",
+    "region": "전국",
+    "minAge": 20,
+    "maxAge": 39,
+    "status": [
+      "취업준비생",
+      "자영업자"
+    ],
+    "category": "창업",
+    "description": "청년 창업자의 사업 역량 강화를 위한 교육비를 지원합니다.",
+    "requiredDocs": [
+      "사업계획서",
+      "교육신청서",
+      "신분증"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 16,
+    "title": "울산 청년 문화생활 지원",
+    "region": "울산",
+    "minAge": 19,
+    "maxAge": 34,
+    "status": [
+      "대학생",
+      "취업준비생",
+      "직장인"
+    ],
+    "category": "생활",
+    "description": "울산 청년의 문화·여가 활동을 위한 이용권을 지원합니다.",
+    "requiredDocs": [
+      "주민등록등본",
+      "신분증"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 17,
+    "title": "세종 청년 직무체험 지원",
+    "region": "세종",
+    "minAge": 18,
+    "maxAge": 34,
+    "status": [
+      "대학생",
+      "취업준비생"
+    ],
+    "category": "취업",
+    "description": "청년에게 단기 직무체험과 실무 프로젝트 참여 기회를 제공합니다.",
+    "requiredDocs": [
+      "재학증명서 또는 구직등록확인서",
+      "신분증"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 18,
+    "title": "전국 청년 주거상담 서비스",
+    "region": "전국",
+    "minAge": 19,
+    "maxAge": 39,
+    "status": [
+      "대학생",
+      "취업준비생",
+      "직장인",
+      "자영업자"
+    ],
+    "category": "주거",
+    "description": "전월세 계약, 보증금, 주거정책 관련 무료 상담을 제공합니다.",
+    "requiredDocs": [
+      "신분증"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 19,
+    "title": "제주 청년 자기계발 지원금",
+    "region": "제주",
+    "minAge": 19,
+    "maxAge": 34,
+    "status": [
+      "취업준비생",
+      "직장인"
+    ],
+    "category": "교육",
+    "description": "제주 청년의 자격증, 어학, 직무교육 등 자기계발 비용을 지원합니다.",
+    "requiredDocs": [
+      "주민등록등본",
+      "교육 또는 시험 결제영수증",
+      "통장사본"
+    ],
+    "applyUrl": "#"
+  },
+  {
+    "id": 20,
+    "title": "강원 청년 지역정착 지원",
+    "region": "강원",
+    "minAge": 19,
+    "maxAge": 39,
+    "status": [
+      "직장인",
+      "자영업자"
+    ],
+    "category": "생활",
+    "description": "강원 지역에 정착한 청년의 생활 안정과 지역 정착을 지원합니다.",
+    "requiredDocs": [
+      "주민등록초본",
+      "재직증명서 또는 사업자등록증",
+      "통장사본"
+    ],
+    "applyUrl": "#"
+  }
+]

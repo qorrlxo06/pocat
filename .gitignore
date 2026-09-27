@@ -1,0 +1,31 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules
+server/node_modules
+
+# Vercel
+.vercel
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+server/.env
+server/.env.*
+!server/.env.example
+
+# OS Files
+.DS_Store
+
+# IDEs and Editors
+.vscode/
+.idea/
+
+# Scratch & Temporary
+scratch_*.js
+*.tmp
+server/cache/
